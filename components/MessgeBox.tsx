@@ -35,7 +35,10 @@ const MessgeBox = ({ chats }: ChatProps) => {
                             }
 
                             return !inline && match ? (
-                                <CodeHighlighter children={children} language={language} />
+                                <CodeHighlighter language={language}>
+                                {children}
+                            </CodeHighlighter>
+            
                             ) : (
                                 <code className='bg-gray-800 text-black px-2 py-[1px] leading-loose rounded' {...props}>
                                     {children}
